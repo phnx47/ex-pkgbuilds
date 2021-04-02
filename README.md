@@ -8,7 +8,7 @@
 
 This repository contains the packages I maintain in [AUR](https://aur.archlinux.org/packages/?K=phnx47&SeB=M), checked into git as subtrees for easier management and pull requests.
 
-Powered by [aurpublish](https://github.com/eli-schwartz/aurpublish).
+Powered by [aurpublish](https://github.com/eli-schwartz/aurpublish) and [nvchecker](https://github.com/lilydjwg/nvchecker).
 
 ## Support
 

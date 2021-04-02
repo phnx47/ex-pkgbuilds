@@ -1,0 +1,21 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+[ledger-live]
+source = "github"
+github = "LedgerHQ/ledger-live-desktop"
+use_latest_release = true
+prefix = "v"
+
+[cro-chain-maind]
+source = "github"
+github = "crypto-org-chain/chain-main"
+use_latest_release = true
+prefix = "v"
+
+[cro-chain-desktop]
+source = "github"
+github = "crypto-com/chain-desktop-wallet"
+use_max_tag = true
+prefix = "v"
