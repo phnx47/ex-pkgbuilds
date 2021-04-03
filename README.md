@@ -4,7 +4,8 @@
 
 # PKGBUILDs
 
-[![Maintainer](https://img.shields.io/static/v1?label=AUR&message=phnx47&color=blue)](https://aur.archlinux.org/account/phnx47)
+[![Maintainer](https://img.shields.io/static/v1?style=flat-square&label=AUR&message=phnx47&color=blue)](https://aur.archlinux.org/account/phnx47)
+[![License](https://img.shields.io/github/license/phnx47/PKGBUILDs?style=flat-square)](LICENSE)
 
 This repository contains the packages I maintain in [AUR](https://aur.archlinux.org/packages/?K=phnx47&SeB=M), checked into git as subtrees for easier management and pull requests.
 
