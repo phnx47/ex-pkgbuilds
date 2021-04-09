@@ -1,6 +1,6 @@
 {
   "cro-chain-desktop-bin": "0.1.5",
-  "cro-chain-maind-bin": "1.2.0",
+  "cro-chain-maind-bin": "1.2.1",
   "ledger-live": "2.25.1",
   "ledger-live-bin": "2.25.1",
   "prey-node-client": "1.9.9"
