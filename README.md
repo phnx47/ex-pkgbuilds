@@ -19,7 +19,6 @@ If you like what I'm accomplishing, feel free to buy me a coffee
 [<img align="left" alt="phnx47 | Kofi" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/kofi0.png" />][ko-fi]
 [<img align="left" alt="phnx47 | Patreon" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/patreon0.png" />][patreon]
 
-\
 &nbsp;
 
 ## License
