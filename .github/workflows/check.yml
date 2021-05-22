@@ -16,7 +16,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: 🔧 Install nvchecker
-        run: sudo apt-get install nvchecker
+        run: pip3 install nvchecker
       - name: ☢ Check Versions
-        shell: bash
         run: ./check.sh
