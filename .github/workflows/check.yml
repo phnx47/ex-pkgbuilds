@@ -1,0 +1,20 @@
+name: ☣ Check Versions
+on:
+  schedule:
+    - cron: "55 */8 * * *"
+  push:
+    branches:
+      - "ci/check"
+
+jobs:
+  check:
+    name: ☣ Check Versions
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: 🎋 Check Versions
+        shell: bash
+        run: echo "VER=$(check.sh)" >> $GITHUB_ENV
