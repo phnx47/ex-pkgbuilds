@@ -23,12 +23,13 @@ jobs:
         run: pip install nvchecker
 
       - name: ☢ Check versions
-        id: check_vers
-        shell: bash
-        run: | 
-          out=$(./check.sh)
-          echo $out
-          echo "::set-output name=new_vers::${out%$'\n'*}"
+        run: ./check.sh >> new-vers.txt
+
+      - name: Read new-vers.txt
+        id: new-vers
+        uses: juliangruber/read-file-action@master
+        with:
+          path: ./new-vers.txt
 
       - name: ✉ Send email
         uses: wadeww/send-email-action@master
@@ -38,6 +39,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: AUR - New Versions
-          body: ${{ join(steps.check_vers.outputs.new_vers, '\n') }}
+          body: ${{ steps.new-vers.outputs.content }}
           to: arch@phnx47.net
           from: noreply@phnx47.net
