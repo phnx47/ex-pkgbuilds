@@ -17,4 +17,6 @@ jobs:
           fetch-depth: 0
       - name: ☢ Check Versions
         shell: bash
-        run: ./check.sh
+        run: |
+          pip3 install nvchecker
+          ./check.sh
