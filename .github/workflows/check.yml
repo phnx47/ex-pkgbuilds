@@ -24,7 +24,8 @@ jobs:
 
       - name: ☢ Check versions
         id: check_vers
-        run: echo "::set-output name=new_vers::$(./check.sh)"
+        shell: bash
+        run: echo "::set-output name=new_vers::$(./check.sh | tr '\n' '|')"
 
       - name: ✉ Test
         run: echo ${{ steps.check_vers.outputs.new_vers }}
