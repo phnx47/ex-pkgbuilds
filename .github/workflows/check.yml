@@ -23,7 +23,8 @@ jobs:
         run: pip install nvchecker
 
       - name: ☢ Check versions
+        id: check_vers
         run: echo "::set-output name=new_vers::$(./check.sh)"
 
       - name: ✉ Test
-        run: echo ${{ steps.run_tests.outputs.new_vers }}
+        run: echo ${{ steps.check_vers.outputs.new_vers }}
