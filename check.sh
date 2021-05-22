@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
-# path for use from cron
-nvchecker -c ~/Projects/My/PKGBUILDs/check.toml -l warning
-nvcmp -c ~/Projects/My/PKGBUILDs/check.toml
+nvchecker -c check.toml -l warning
+nvcmp -c check.toml

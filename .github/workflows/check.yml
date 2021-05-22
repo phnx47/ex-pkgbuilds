@@ -1,0 +1,42 @@
+name: ☣ Check Versions
+on:
+  schedule:
+    - cron: "55 */8 * * *"
+
+jobs:
+  check:
+    name: ☣ Check Versions
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: 🛠 Install dependencies
+        run: sudo apt-get install libssl-dev libcurl4-openssl-dev
+
+      - name: 🔧 Install nvchecker
+        run: pip install nvchecker
+
+      - name: ☢ Check versions
+        run: ./check.sh >> new-vers.txt
+
+      - name: 🗃 Read new-vers.txt
+        id: new-vers
+        uses: juliangruber/read-file-action@master
+        with:
+          path: ./new-vers.txt
+
+      - name: ✉ Send email
+        if: "endsWith(steps.new-vers.outputs.content, '\n')"
+        uses: wadeww/send-email-action@master
+        with:
+          server_address: smtp.fastmail.com
+          port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: AUR - New Versions
+          body: ${{ steps.new-vers.outputs.content }}
+          to: arch@phnx47.net
+          from: noreply@phnx47.net
