@@ -25,7 +25,7 @@ jobs:
       - name: ☢ Check versions
         run: ./check.sh >> new-vers.txt
 
-      - name: Read new-vers.txt
+      - name: 🗃 Read new-vers.txt
         id: new-vers
         uses: juliangruber/read-file-action@master
         with:
