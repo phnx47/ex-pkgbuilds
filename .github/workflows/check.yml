@@ -15,7 +15,12 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 0
+
+      - name: 🛠 Setup Python
+        uses: actions/setup-python@master
+
       - name: 🔧 Install nvchecker
         run: pip3 install nvchecker
+
       - name: ☢ Check Versions
         run: ./check.sh
