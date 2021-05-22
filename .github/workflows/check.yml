@@ -25,7 +25,10 @@ jobs:
       - name: ☢ Check versions
         id: check_vers
         shell: bash
-        run: echo "::set-output name=new_vers::${./check.sh%$'\n'*}"
+        run: | 
+          out=./check.sh
+          echo $out
+          echo "::set-output name=new_vers::${out%$'\n'*}"
 
       - name: ✉ Send email
         uses: wadeww/send-email-action@master
