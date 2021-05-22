@@ -23,4 +23,4 @@ jobs:
         run: pip install nvchecker
 
       - name: ☢ Check versions
-        run: ./check.sh
+        run: echo "NEW_VER=(./check.sh)" >> $GITHUB_ENV
