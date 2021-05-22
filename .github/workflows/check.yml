@@ -24,3 +24,6 @@ jobs:
 
       - name: ☢ Check versions
         run: echo "NEW_VER=(./check.sh)" >> $GITHUB_ENV
+
+      - name: ✉ Test
+        run: echo ${{ env.NEW_VER }}
