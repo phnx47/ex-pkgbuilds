@@ -16,11 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🛠 Setup Python
-        uses: actions/setup-python@master
+      - name: 🛠 Setup Python deps
+        run: sudo apt-get install libssl-dev libcurl4-openssl-dev python-dev
 
       - name: 🔧 Install nvchecker
-        run: pip3 install tornado pycurl nvchecker
+        run: pip install nvchecker
 
       - name: ☢ Check Versions
         run: ./check.sh
