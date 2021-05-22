@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 0
-      - name: 🎋 Check Versions
+      - name: ☢ Check Versions
         shell: bash
-        run: echo "VER=$(check.sh)" >> $GITHUB_ENV
+        run: ./check.sh
