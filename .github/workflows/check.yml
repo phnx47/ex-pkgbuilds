@@ -32,6 +32,7 @@ jobs:
           path: ./new-vers.txt
 
       - name: ✉ Send email
+        if: "endsWith(steps.new-vers.outputs.content, '\n')"
         uses: wadeww/send-email-action@master
         with:
           server_address: smtp.fastmail.com
