@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-python@master
 
       - name: 🔧 Install nvchecker
-        run: pip3 install nvchecker
+        run: pip3 install tornado pycurl nvchecker
 
       - name: ☢ Check Versions
         run: ./check.sh
