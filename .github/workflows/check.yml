@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 0
+      - name: 🔧 Install nvchecker
+        run: sudo apt-get install nvchecker
       - name: ☢ Check Versions
         shell: bash
-        run: |
-          pip3 install nvchecker
-          ./check.sh
+        run: ./check.sh
