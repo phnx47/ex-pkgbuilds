@@ -16,11 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🛠 Setup Python deps
-        run: sudo apt-get install libssl-dev libcurl4-openssl-dev python-dev
+      - name: 🛠 Install dependencies
+        run: sudo apt-get install libssl-dev libcurl4-openssl-dev
 
       - name: 🔧 Install nvchecker
         run: pip install nvchecker
 
-      - name: ☢ Check Versions
+      - name: ☢ Check versions
         run: ./check.sh
