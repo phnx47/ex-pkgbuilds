@@ -2,9 +2,6 @@ name: ☣ Check Versions
 on:
   schedule:
     - cron: "55 */8 * * *"
-  push:
-    branches:
-      - "ci/check"
 
 jobs:
   check:
