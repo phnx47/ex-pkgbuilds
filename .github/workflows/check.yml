@@ -25,7 +25,16 @@ jobs:
       - name: ☢ Check versions
         id: check_vers
         shell: bash
-        run: echo "::set-output name=new_vers::$(./check.sh | tr '\n' '|')"
+        run: echo "::set-output name=new_vers::$(./check.sh | tr '\n' ';')"
 
-      - name: ✉ Test
-        run: echo ${{ steps.check_vers.outputs.new_vers }}
+      - name: ✉ Send email
+        uses: wadeww/send-email-action@master
+        with:
+          server_address: smtp.fastmail.com
+          port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: AUR - New Versions
+          body: ${{ steps.check_vers.outputs.new_vers | tr ';' '\n' }}
+          to: arch@phnx47.net
+          from: noreply@phnx47.net
