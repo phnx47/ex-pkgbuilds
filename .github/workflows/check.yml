@@ -25,7 +25,7 @@ jobs:
       - name: ☢ Check versions
         id: check_vers
         shell: bash
-        run: echo "::set-output name=new_vers::$(./check.sh | tr '\n' ';')"
+        run: echo "::set-output name=new_vers::${./check.sh%$'\n'*}"
 
       - name: ✉ Send email
         uses: wadeww/send-email-action@master
@@ -35,6 +35,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: AUR - New Versions
-          body: ${ ${{ steps.check_vers.outputs.new_vers  }} | tr ';' '\n' }
+          body: ${{ join(teps.check_vers.outputs.new_vers, '\n') }}
           to: arch@phnx47.net
           from: noreply@phnx47.net
