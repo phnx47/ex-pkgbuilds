@@ -38,6 +38,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: AUR - New Versions
-          body: ${{ join(teps.check_vers.outputs.new_vers, '\n') }}
+          body: ${{ join(steps.check_vers.outputs.new_vers, '\n') }}
           to: arch@phnx47.net
           from: noreply@phnx47.net
