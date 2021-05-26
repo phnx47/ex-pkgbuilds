@@ -26,6 +26,7 @@ jobs:
         id: new-vers
         uses: juliangruber/read-file-action@master
         with:
+          trim: false
           path: ./new-vers.txt
 
       - name: ✉ send email
