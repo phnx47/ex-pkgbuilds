@@ -19,9 +19,11 @@ on:
   status: {}
 jobs:
   automerge:
+    name: 🛠 automerge
     runs-on: ubuntu-20.04
     steps:
       - name: ☢ automerge
         uses: pascalgn/automerge-action@v0.14.2
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_RETRIES: "10"
