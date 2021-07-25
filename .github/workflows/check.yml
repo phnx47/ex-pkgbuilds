@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
 
       - name: 🛠 install ubuntu deps
-        run: sudo apt-get install libssl-dev libcurl4-openssl-dev
+        run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
       - name: 🔧 install nvchecker
         run: pip install nvchecker
