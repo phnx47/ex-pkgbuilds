@@ -3,6 +3,7 @@
 *.tgz
 *.zip
 *.AppImage
+*.deb
 
 # signed sources
 *.asc
