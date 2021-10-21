@@ -2,7 +2,7 @@
   "cro-chain-desktop-bin": "0.4.2",
   "cro-chain-maind-bin": "2.1.2",
   "kaizen": "5.715.100",
-  "ledger-live": "2.34.2",
+  "ledger-live": "2.34.3",
   "ledger-live-bin": "2.34.2",
   "prey-node-client": "1.9.13"
 }
