@@ -1,7 +1,6 @@
 [github]: https://github.com/sponsors/phnx47
 [bmac]: https://www.buymeacoffee.com/phnx47
 [ko-fi]: https://ko-fi.com/phnx47
-[patreon]: https://www.patreon.com/phnx47
 
 # PKGBUILDs
 
@@ -19,7 +18,6 @@ If you like what I'm accomplishing, feel free to buy me a coffee
 [<img align="left" alt="phnx47 | GitHub Sponsors" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/github0.svg" />][github]
 [<img align="left" alt="phnx47 | Buy Me a Coffee" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/bmac0.png" />][bmac]
 [<img align="left" alt="phnx47 | Kofi" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/kofi0.png" />][ko-fi]
-[<img align="left" alt="phnx47 | Patreon" width="32px" src="https://raw.githubusercontent.com/phnx47/files/master/button-sponsors/patreon0.png" />][patreon]
 
 &nbsp;
 
