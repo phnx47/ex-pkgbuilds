@@ -1,7 +1,7 @@
 name: ☣ Check Versions
 on:
   schedule:
-    - cron: "55 */12 * * *"
+    - cron: "55 */24 * * *"
 
 jobs:
   check:
