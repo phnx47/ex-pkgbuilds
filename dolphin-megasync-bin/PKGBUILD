@@ -1,4 +1,8 @@
-# Maintainer: zhullyb <zhullyb at outlook dot com>
+# Maintainer: Serge K <arch@phnx47.net>
+# Contributor: zhullyb <zhullyb at outlook dot com>
+
+# https://github.com/phnx47/pkgbuilds
+
 pkgname=dolphin-megasync-bin
 pkgver=3.6.6
 pkgrel=2
@@ -6,14 +10,12 @@ pkgdesc="Extension for KDE based file managers to interact with Megasync"
 arch=('x86_64')
 url="http://mega.nz"
 license=('custom')
-provides=("dolphin-megasync=$pkgver")
+provides=("dolphin-megasync")
 conflicts=('dolphin-megasync' 'dolphin-megasync-git')
-depends=('megasync>=3.5'
-         'dolphin')
+depends=('megasync>=3.5' 'dolphin')
 source=("${url}/linux/MEGAsync/Arch_Extra/x86_64/dolphin-megasync-${pkgver}-${pkgrel}-x86_64.pkg.tar.xz")
-md5sums=('882a2bb9f4bec41ae285ae2b353d730b')
+sha512sums=('beacd8d79481ade9dffd51a72d63589249f6ae530bf76576f7e477ffca1fef092b45fd238f3963b0f4dc6e645327507165459b8fa925be519f4879b4df884c1e')
 
 package() {
-    cp -R "${srcdir}/usr" "${pkgdir}/"
+  cp -R "${srcdir}/usr" "${pkgdir}/"
 }
- 
