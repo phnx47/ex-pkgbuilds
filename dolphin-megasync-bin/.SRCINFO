@@ -10,7 +10,9 @@ pkgbase = dolphin-megasync-bin
 	provides = dolphin-megasync
 	conflicts = dolphin-megasync
 	conflicts = dolphin-megasync-git
-	source = http://mega.nz/linux/MEGAsync/Arch_Extra/x86_64/dolphin-megasync-3.6.6-2-x86_64.pkg.tar.xz
+	source = dolphin-megasync-3.6.6-2-x86_64.pkg.tar.xz::http://mega.nz/linux/MEGAsync/Arch_Extra/x86_64/dolphin-megasync-3.6.6-2-x86_64.pkg.tar.xz
+	source = LICENCE.md::https://raw.githubusercontent.com/meganz/MEGAsync/master/LICENCE.md
 	sha512sums = beacd8d79481ade9dffd51a72d63589249f6ae530bf76576f7e477ffca1fef092b45fd238f3963b0f4dc6e645327507165459b8fa925be519f4879b4df884c1e
+	sha512sums = a41bbe7bf6846f06262e8b8189c6760406ec2114f49af50544201ca9fbed8baac31e69839af69931bbbe7d058e24d6f0f5cc1cd9d9636d56b3eb7b7d9fe44b5a
 
 pkgname = dolphin-megasync-bin
