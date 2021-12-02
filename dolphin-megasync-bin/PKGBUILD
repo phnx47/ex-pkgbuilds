@@ -6,7 +6,7 @@
 pkgname=dolphin-megasync-bin
 pkgver=3.6.6
 pkgrel=2
-pkgdesc="Managing your MEGA cloud drive using Dolphin file manager."
+pkgdesc="Managing your MEGA cloud drive using Dolphin file manager"
 arch=('x86_64')
 url="http://mega.nz"
 license=('custom')
