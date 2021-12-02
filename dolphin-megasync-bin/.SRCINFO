@@ -1,5 +1,5 @@
 pkgbase = dolphin-megasync-bin
-	pkgdesc = Extension for KDE based file managers to interact with Megasync
+	pkgdesc = Managing your MEGA cloud drive using Dolphin file manager.
 	pkgver = 3.6.6
 	pkgrel = 2
 	url = http://mega.nz
