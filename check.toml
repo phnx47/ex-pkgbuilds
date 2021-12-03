@@ -20,6 +20,12 @@ github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
+[cro-chain-desktop]
+source = "github"
+github = "crypto-com/chain-desktop-wallet"
+use_latest_release = true
+prefix = "v"
+
 [cro-chain-desktop-bin]
 source = "github"
 github = "crypto-com/chain-desktop-wallet"
