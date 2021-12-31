@@ -5,31 +5,31 @@ on:
 
 jobs:
   check:
-    name: ☣ check
+    name: ☣ Check
     runs-on: ubuntu-20.04
     steps:
-      - name: 🚚 checkout
+      - name: 🚚 Checkout
         uses: actions/checkout@master
         with:
           fetch-depth: 0
 
-      - name: 🛠 install ubuntu deps
+      - name: 🛠 Install ubuntu deps
         run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
-      - name: 🔧 install nvchecker
+      - name: 🔧 Install nvchecker
         run: pip install nvchecker
 
-      - name: ☢ run check.sh
+      - name: ☢ Run check.sh
         run: ./check.sh >> new-vers.txt
 
-      - name: 🗃 read new-vers.txt
+      - name: 🗃 Read new-vers.txt
         id: new-vers
         uses: juliangruber/read-file-action@master
         with:
           trim: false
           path: ./new-vers.txt
 
-      - name: ✉ send email
+      - name: ✉ Send email
         if: "endsWith(steps.new-vers.outputs.content, '\n')"
         uses: wadeww/send-email-action@master
         with:
