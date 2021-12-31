@@ -11,6 +11,32 @@ This repository contains the packages I maintain in [AUR](https://aur.archlinux.
 
 Powered by [aurpublish](https://github.com/eli-schwartz/aurpublish) and [nvchecker](https://github.com/lilydjwg/nvchecker).
 
+## Use
+
+### Install dependecies
+
+```sh
+pacman -S nvchecker aurpublish
+```
+
+### Initialize GitHooks
+
+```sh
+aurpublish setup
+```
+
+### Check new versions
+
+```sh
+./check.sh
+```
+
+### Update to new version
+
+```sh
+./update.sh PACKAGE
+```
+
 ## Support
 
 If you like what I'm accomplishing, feel free to buy me a coffee
