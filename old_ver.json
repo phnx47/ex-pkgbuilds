@@ -7,5 +7,5 @@
   "koofr": "eb5e9e0",
   "ledger-live": "2.36.3",
   "ledger-live-bin": "2.36.3",
-  "prey-node-client": "1.9.15"
+  "prey-node-client": ".1.9.15"
 }
