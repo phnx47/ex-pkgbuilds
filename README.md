@@ -37,9 +37,9 @@ aurpublish setup
 ./update.sh PACKAGE
 ```
 
-## Automation
+### GitHub Actions
 
-### Check new versions and send an email with the list with new versions
+Check new versions and send an email with the list with new versions
 
 ```yml
 name: Check Versions
