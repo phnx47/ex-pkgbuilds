@@ -33,11 +33,11 @@ jobs:
         if: "endsWith(steps.new-vers.outputs.content, '\n')"
         uses: wadeww/send-email-action@master
         with:
-          server_address: smtp.fastmail.com
+          server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
           port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: AUR - New Versions
           body: ${{ steps.new-vers.outputs.content }}
-          to: arch@phnx47.net
-          from: noreply@phnx47.net
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
