@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
       - name: 🔧 Install nvchecker
-        run: pip install nvchecker==v2.5
+        run: pip install nvchecker
 
       - name: ☢ Run check.sh
         run: ./check.sh >> new-vers.txt
