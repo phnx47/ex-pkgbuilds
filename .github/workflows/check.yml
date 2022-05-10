@@ -1,7 +1,7 @@
 name: ☣ Check Versions
 on:
   schedule:
-    - cron: "55 12/24 * * *"
+    - cron: "0 8 * * *"
 
 jobs:
   check:
@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🛠 Install ubuntu deps
+      - name: 🛠Install Ubuntu dependencies
         run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
       - name: 🔧 Install nvchecker
