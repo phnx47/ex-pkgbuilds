@@ -9,10 +9,9 @@ use_latest_release = true
 prefix = "v"
 
 [ledger-live-bin]
-source = "github"
-github = "LedgerHQ/ledger-live-desktop"
-use_latest_release = true
-prefix = "v"
+source = "regex"
+url = "https://raw.githubusercontent.com/LedgerHQ/ledger-live/main/apps/ledger-live-desktop/CHANGELOG.md"
+regex = "## ([0-9]+\\.[0-9]+\\.[0-9]+)"
 
 [cro-chain-maind-bin]
 source = "github"
