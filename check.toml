@@ -9,9 +9,11 @@ use_latest_release = true
 prefix = "v"
 
 [ledger-live-bin]
-source = "regex"
-url = "https://raw.githubusercontent.com/LedgerHQ/ledger-live/main/apps/ledger-live-desktop/CHANGELOG.md"
-regex = "## ([0-9]+\\.[0-9]+\\.[0-9]+)"
+source = "httpheader"
+method = "GET"
+url = "https://download.live.ledger.com/latest/linux"
+regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
+header = "location"
 
 [cro-chain-maind-bin]
 source = "github"
