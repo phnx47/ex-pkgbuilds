@@ -10,7 +10,6 @@ prefix = "v"
 
 [ledger-live-bin]
 source = "httpheader"
-method = "GET"
 url = "https://download.live.ledger.com/latest/linux"
 regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
 header = "location"
