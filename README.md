@@ -7,7 +7,7 @@
 [![Maintainer](https://img.shields.io/static/v1?style=flat-square&label=AUR&message=phnx47&color=blue)](https://aur.archlinux.org/packages?SeB=M&K=phnx47)
 [![License](https://img.shields.io/github/license/phnx47/PKGBUILDs?style=flat-square&label=License)](LICENSE)
 
-This repository contains the packages I maintain in [AUR](https://aur.archlinux.org/packages?SeB=M&K=phnx47), checked into git as subtrees for easier management and pull requests.
+This repository contains the packages phnx47 maintain in [AUR](https://aur.archlinux.org/packages?SeB=M&K=phnx47), checked into git as subtrees for easier management and pull requests.
 
 Powered by [aurpublish](https://github.com/eli-schwartz/aurpublish) and [nvchecker](https://github.com/lilydjwg/nvchecker).
 
