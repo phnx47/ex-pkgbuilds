@@ -4,7 +4,7 @@
   "cro-chain-maind-bin": "3.3.3",
   "kaizen": "6.822.108",
   "koofr": "eb5e9e0",
-  "ledger-live": "2.44.1",
+  "ledger-live": "2.45.0",
   "ledger-live-bin": "2.44.0",
   "prey-node-client": "1.10.9"
 }
