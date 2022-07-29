@@ -2,7 +2,7 @@
 
 set -e
 
-pkg=${1}
+pkg=${1%/}
 
 if [ -z "$pkg" ]; then
   echo "Please provide package!"
