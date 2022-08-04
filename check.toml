@@ -37,7 +37,7 @@ prefix = "v"
 source = "github"
 github = "prey/prey-node-client"
 use_latest_release = true
-prefix = "v."
+prefix = "v"
 
 [kaizen]
 source = "regex"
