@@ -1,19 +1,20 @@
-name: ☣ Check Versions
+name: ☣ New version checker
 on:
   schedule:
     - cron: "0 8 * * *"
+  workflow_dispatch:
 
 jobs:
-  check:
-    name: ☣ Check
+  check-notify:
+    name: ☣ Check & Notify
     runs-on: ubuntu-20.04
     steps:
       - name: 🚚 Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: 🛠Install Ubuntu dependencies
+      - name: 🛠 Install Ubuntu packages
         run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
       - name: 🔧 Install nvchecker
@@ -24,14 +25,14 @@ jobs:
 
       - name: 🗃 Read new-vers.txt
         id: new-vers
-        uses: juliangruber/read-file-action@master
+        uses: juliangruber/read-file-action@v1
         with:
           trim: false
           path: ./new-vers.txt
 
       - name: ✉ Send email
         if: "endsWith(steps.new-vers.outputs.content, '\n')"
-        uses: wadeww/send-email-action@master
+        uses: wadeww/send-email-action@v1
         with:
           server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
           port: 465

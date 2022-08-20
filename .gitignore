@@ -18,6 +18,8 @@
 
 # subfolders, e.g. source or built package trees, vcs
 */**/
+# exception for .github
+!.github/**
 
 # backup files
 *~
