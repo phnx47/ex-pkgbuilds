@@ -37,55 +37,6 @@ aurpublish setup
 ./update.sh PACKAGE
 ```
 
-### GitHub Actions
-
-Check new versions and send an email with the list with new versions
-
-```yml
-name: Check Versions
-on:
-  schedule:
-    - cron: "55 */24 * * *"
-
-jobs:
-  check:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 0
-
-      - name: Install ubuntu deps
-        run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
-
-      - name: Install nvchecker
-        run: pip install nvchecker
-
-      - name: Run check.sh
-        run: ./check.sh >> new-vers.txt
-
-      - name: Read new-vers.txt
-        id: new-vers
-        uses: juliangruber/read-file-action@master
-        with:
-          trim: false
-          path: ./new-vers.txt
-
-      - name: Send email
-        if: "endsWith(steps.new-vers.outputs.content, '\n')"
-        uses: wadeww/send-email-action@master
-        with:
-          server_address: [[URL of SMTP server]]
-          port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: AUR - New Versions
-          body: ${{ steps.new-vers.outputs.content }}
-          to: [[Comma-separated recipient list]]
-          from: [[Sender email address]]
-```
-
 ## Support
 
 If you like what I'm accomplishing, feel free to buy me a coffee
