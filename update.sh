@@ -19,6 +19,8 @@ cd ${pkg}
 sed -E -i "s/pkgver=.*/pkgver=${ver}/" PKGBUILD
 sed -E -i "s/pkgrel=.*/pkgrel=1/" PKGBUILD
 updpkgsums
+makepkg --printsrcinfo > .SRCINFO
+makepkg
 cd ..
 
 nvtake ${pkg} -c check.toml
