@@ -9,7 +9,7 @@ if [ -z "$pkg" ]; then
   exit 1
 fi
 
-nvchecker -c check.toml
+nvchecker -e ${pkg} -c check.toml
 new_ver=$(cat new_ver.json | jq .\"${pkg}\")
 
 new_ver="${new_ver%\"}"
