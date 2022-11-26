@@ -2,25 +2,6 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-[ledger-live]
-source = "github"
-github = "LedgerHQ/ledger-live"
-use_max_tag = true
-include_regex = "@ledgerhq/live-desktop@([0-9]+\\.[0-9]+\\.[0-9]+)"
-prefix = "@ledgerhq/live-desktop@"
-
-[ledger-live-bin]
-source = "httpheader"
-url = "https://download.live.ledger.com/latest/linux"
-regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
-header = "location"
-
-[cro-chain-maind-bin]
-source = "github"
-github = "crypto-org-chain/chain-main"
-use_latest_release = true
-prefix = "v"
-
 [cro-chain-desktop]
 source = "github"
 github = "crypto-com/chain-desktop-wallet"
@@ -33,9 +14,9 @@ github = "crypto-com/chain-desktop-wallet"
 use_latest_release = true
 prefix = "v"
 
-[prey-node-client]
+[cro-chain-maind-bin]
 source = "github"
-github = "prey/prey-node-client"
+github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
@@ -50,8 +31,27 @@ regex = "koofr-([a-z0-9]*)-linux"
 url = "https://app.koofr.net/dl/apps/linux64"
 header = "content-disposition"
 
+[ledger-live]
+source = "github"
+github = "LedgerHQ/ledger-live"
+use_max_tag = true
+include_regex = "@ledgerhq/live-desktop@([0-9]+\\.[0-9]+\\.[0-9]+)"
+prefix = "@ledgerhq/live-desktop@"
+
+[ledger-live-bin]
+source = "httpheader"
+url = "https://download.live.ledger.com/latest/linux"
+regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
+header = "location"
+
 [oxen-electron-wallet]
 source = "github"
 github = "oxen-io/oxen-electron-gui-wallet"
+use_latest_release = true
+prefix = "v"
+
+[prey-node-client]
+source = "github"
+github = "prey/prey-node-client"
 use_latest_release = true
 prefix = "v"
