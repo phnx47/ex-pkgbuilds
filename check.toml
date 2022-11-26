@@ -49,3 +49,9 @@ source = "httpheader"
 regex = "koofr-([a-z0-9]*)-linux"
 url = "https://app.koofr.net/dl/apps/linux64"
 header = "content-disposition"
+
+[oxen-electron-wallet]
+source = "github"
+github = "oxen-io/oxen-electron-gui-wallet"
+use_latest_release = true
+prefix = "v"
