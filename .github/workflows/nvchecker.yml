@@ -6,7 +6,7 @@ on:
 
 jobs:
   check-notify:
-    name: ☣ Check & Notify
+    name: ✔ Check & Notify
     runs-on: ubuntu-22.04
     steps:
       - name: 🚚 Checkout
@@ -20,7 +20,7 @@ jobs:
       - name: 🔧 Install nvchecker
         run: pip install nvchecker
 
-      - name: ☢ Run check.sh
+      - name: ✓ Run check.sh
         run: ./check.sh >> new-vers.txt
 
       - name: 🗃 Read new-vers.txt
@@ -30,15 +30,15 @@ jobs:
           trim: false
           path: ./new-vers.txt
 
-      - name: ✉ Send email
+      - name: ✉ Send mail
         if: "endsWith(steps.new-vers.outputs.content, '\n')"
-        uses: wadeww/send-email-action@v1
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
-          port: 465
+          server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: AUR - New Versions
+          subject: AUR New Version Checker (${{ github.run_id }})
           body: ${{ steps.new-vers.outputs.content }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
