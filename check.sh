@@ -2,5 +2,5 @@
 
 set -e
 
-nvchecker -c check.toml -l warning
+nvchecker -c check.toml -l warning --failures
 nvcmp -c check.toml
