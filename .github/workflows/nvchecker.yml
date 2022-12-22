@@ -43,7 +43,6 @@ jobs:
             nvchecker found new versions via GitHub Actions [1]
 
             ${{ steps.new-vers.outputs.content }}
-
-            [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs/${{ github.job }}
+            [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
