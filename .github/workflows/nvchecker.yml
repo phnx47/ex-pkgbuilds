@@ -38,7 +38,12 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: AUR New Version Checker (${{ github.run_id }})
-          body: ${{ steps.new-vers.outputs.content }}
+          subject: AUR New Version Checker (${{ github.run_number }})
+          body: |
+            nvchecker found new versions via GitHub Actions [1]
+
+            ${{ steps.new-vers.outputs.content }}
+
+            [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs/${{ github.job }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
