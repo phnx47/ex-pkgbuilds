@@ -21,7 +21,11 @@ jobs:
         run: pip install nvchecker
 
       - name: ✓ Run check.sh
-        run: ./check.sh >> new-vers.txt
+        uses: nick-fields/retry@v2
+        with:
+          timeout_seconds: 30
+          max_attempts: 3
+          command: ./check.sh >> new-vers.txt
 
       - name: 🗃 Read new-vers.txt
         id: new-vers
