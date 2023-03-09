@@ -8,6 +8,6 @@
   "ledger-live-bin": "2.54.0",
   "oxen-electron-wallet": "1.8.1",
   "oxen-electron-wallet-bin": "1.8.1",
-  "prey-node-client": "1.11.0",
+  "prey-node-client": "1.11.1",
   "xawtv": "3.107"
 }
