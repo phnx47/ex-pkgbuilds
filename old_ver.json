@@ -9,5 +9,6 @@
   "oxen-electron-wallet": "1.8.1",
   "oxen-electron-wallet-bin": "1.8.1",
   "prey-node-client": "1.11.2",
+  "solidity": "0.8.19",
   "xawtv": "3.107"
 }
