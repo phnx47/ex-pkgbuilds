@@ -4,6 +4,7 @@
 *.zip
 *.AppImage
 *.deb
+*.bin
 *.part
 
 # signed sources
