@@ -66,6 +66,12 @@ github = "prey/prey-node-client"
 use_latest_release = true
 prefix = "v"
 
+[proto-bin]
+source = "github"
+github = "moonrepo/proto"
+use_latest_release = true
+prefix = "v"
+
 [solidity]
 source = "github"
 github = "ethereum/solidity"
