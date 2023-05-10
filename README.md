@@ -6,23 +6,11 @@
 [![nvchecker](https://img.shields.io/github/actions/workflow/status/phnx47/pkgbuilds/nvchecker.yml?branch=main&label=nvchecker&logo=github&style=flat-square)](https://github.com/phnx47/pkgbuilds/actions/workflows/nvchecker.yml)
 [![license](https://img.shields.io/github/license/phnx47/pkgbuilds?style=flat-square)](LICENSE)
 
-This repository contains the packages phnx47 maintain in [AUR][link-aur], checked into git as subtrees for easier management and pull requests.
+This repository contains the packages phnx47 maintain and co-maintain in [AUR][link-aur].
 
-Powered by [aurpublish](https://github.com/eli-schwartz/aurpublish) and [nvchecker](https://github.com/lilydjwg/nvchecker).
+Powered by [aurpublish](https://github.com/phnx47/aurpublish) with a few changes and [nvchecker](https://github.com/lilydjwg/nvchecker).
 
 ## How to Use
-
-### Install dependecies
-
-```sh
-pacman -S nvchecker aurpublish
-```
-
-### Initialize GitHooks
-
-```sh
-aurpublish setup
-```
 
 ### Check new versions
 
