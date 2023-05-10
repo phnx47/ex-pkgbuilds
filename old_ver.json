@@ -13,5 +13,6 @@
   "proto": "0.8.3",
   "proto-bin": "0.8.3",
   "solidity": "0.8.19",
+  "solidity-bin": "0.8.19",
   "xawtv": "3.107"
 }
