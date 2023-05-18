@@ -1,5 +1,5 @@
 [__config__]
-oldver = "old_ver.json"
+oldver = "ver.json"
 newver = "new_ver.json"
 
 [cro-chain-desktop]
