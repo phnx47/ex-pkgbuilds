@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-set -e
+set -eu -o pipefail
 
 pkg=${1%/}
 
@@ -20,9 +20,8 @@ old_ver=$(grep -P '^pkgver' PKGBUILD | cut -d= -f2)
 sed -E -i "s/pkgver=.*/pkgver=${new_ver}/" PKGBUILD
 sed -E -i "s/pkgrel=.*/pkgrel=1/" PKGBUILD
 updpkgsums
-# 'aurpublish' auto generate .SRCINFO
-# makepkg --printsrcinfo > .SRCINFO
 makepkg
+makepkg --printsrcinfo > .SRCINFO
 cd ..
 
 nvtake "${pkg}" -c check.toml
