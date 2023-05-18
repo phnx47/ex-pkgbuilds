@@ -1,6 +1,6 @@
 [__config__]
 oldver = "ver.json"
-newver = "new_ver.json"
+newver = "nver.json"
 
 [cro-chain-desktop]
 source = "github"

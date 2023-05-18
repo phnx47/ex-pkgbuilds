@@ -27,7 +27,7 @@
 *.bak
 
 # nvchecker files
-new_ver.json
+nver.json
 
 # user repository
 .repo
