@@ -1,18 +1,13 @@
 {
   "cro-chain-desktop": "1.4.1",
-  "cro-chain-desktop-bin": "1.4.1",
-  "cro-chain-maind-bin": "4.2.2",
+  "cro-chain-maind": "4.2.2",
   "kaizen": "6.850.110",
   "koofr": "b59bd52",
   "ledger-live": "2.58.0",
-  "ledger-live-bin": "2.58.0",
   "oxen-core": "10.3.0",
   "oxen-electron-wallet": "1.8.1",
-  "oxen-electron-wallet-bin": "1.8.1",
   "prey-node-client": "1.11.4",
   "proto": "0.8.3",
-  "proto-bin": "0.8.3",
   "solidity": "0.8.20",
-  "solidity-bin": "0.8.20",
   "xawtv": "3.107"
 }

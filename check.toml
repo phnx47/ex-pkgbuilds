@@ -8,13 +8,7 @@ github = "crypto-com/chain-desktop-wallet"
 use_latest_release = true
 prefix = "v"
 
-[cro-chain-desktop-bin]
-source = "github"
-github = "crypto-com/chain-desktop-wallet"
-use_latest_release = true
-prefix = "v"
-
-[cro-chain-maind-bin]
+[cro-chain-maind]
 source = "github"
 github = "crypto-org-chain/chain-main"
 use_latest_release = true
@@ -32,11 +26,6 @@ url = "https://app.koofr.net/dl/apps/linux64"
 header = "content-disposition"
 
 [ledger-live]
-source = "regex"
-url = "https://raw.githubusercontent.com/LedgerHQ/ledger-live/main/apps/ledger-live-desktop/RELEASE_NOTES.md"
-regex = "# ([0-9]+\\.[0-9]+\\.[0-9]+)"
-
-[ledger-live-bin]
 source = "httpheader"
 url = "https://download.live.ledger.com/latest/linux"
 regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
@@ -54,12 +43,6 @@ github = "oxen-io/oxen-electron-gui-wallet"
 use_latest_release = true
 prefix = "v"
 
-[oxen-electron-wallet-bin]
-source = "github"
-github = "oxen-io/oxen-electron-gui-wallet"
-use_latest_release = true
-prefix = "v"
-
 [prey-node-client]
 source = "github"
 github = "prey/prey-node-client"
@@ -72,19 +55,7 @@ github = "moonrepo/proto"
 use_latest_release = true
 prefix = "v"
 
-[proto-bin]
-source = "github"
-github = "moonrepo/proto"
-use_latest_release = true
-prefix = "v"
-
 [solidity]
-source = "github"
-github = "ethereum/solidity"
-use_latest_release = true
-prefix = "v"
-
-[solidity-bin]
 source = "github"
 github = "ethereum/solidity"
 use_latest_release = true
