@@ -1,4 +1,4 @@
-name: ✔ New Version Checker
+name: New Version Checker
 on:
   schedule:
     - cron: "0 8 * * *"
@@ -6,37 +6,39 @@ on:
 
 jobs:
   check-notify:
-    name: ✔ Check & Notify
+    name: Check & Notify
     runs-on: ubuntu-22.04
     steps:
-      - name: 🚚 Checkout
+      - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: 🛠 Install Ubuntu packages
+      - name: Install Ubuntu packages
         run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
 
-      - name: 🔧 Install nvchecker
+      - name: Install nvchecker
         run: pip install nvchecker
 
-      - name: ✓ Run check.sh
+      - name: Run check.sh
         uses: nick-fields/retry@v2
         with:
           timeout_seconds: 30
           retry_wait_seconds: 30
           max_attempts: 3
-          command: ./check.sh >> new-vers.txt
+          command: ./check.sh > nver.txt
 
-      - name: 🗃 Read new-vers.txt
-        id: new-vers
+      - name: Read nver.txt
+        id: nver
         uses: juliangruber/read-file-action@v1
         with:
           trim: false
-          path: ./new-vers.txt
+          path: ./nver.txt
 
-      - name: ✉ Send mail
-        if: "endsWith(steps.new-vers.outputs.content, '\n')"
+      - name: Add summary
+        if: "endsWith(steps.nver.outputs.content, '\n')"
+        run: echo "${{ steps.nver.outputs.content }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Send mail
+        if: "endsWith(steps.nver.outputs.content, '\n')"
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
@@ -47,7 +49,7 @@ jobs:
           body: |
             nvchecker found new versions via GitHub Actions [1]
 
-            ${{ steps.new-vers.outputs.content }}
+            ${{ steps.nver.outputs.content }}
             [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
