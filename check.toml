@@ -14,6 +14,11 @@ github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
+[jetbrains-fleet]
+source = "regex"
+url = "https://data.services.jetbrains.com/products/releases?code=FL&latest=true&type=preview"
+regex = "\"version\":\"([0-9]+\\.[0-9]+\\.[0-9]+)"
+
 [kaizen]
 source = "regex"
 url = "https://www.elastic-kaizen.com/download.html"
