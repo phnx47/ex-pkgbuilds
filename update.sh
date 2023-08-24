@@ -20,7 +20,7 @@ cd "${pkgname}"
 sed -E -i "s/pkgver=.*/pkgver=${nver}/" PKGBUILD
 sed -E -i "s/pkgrel=.*/pkgrel=1/" PKGBUILD
 updpkgsums
-makepkg
+makepkg -scC
 makepkg --printsrcinfo > .SRCINFO
 cd ..
 
