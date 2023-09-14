@@ -24,13 +24,13 @@ if [ "${src}" = "github" ] && grep -q "_sha=" "${pkgname}/PKGBUILD"; then
   echo "GitHub source with '_sha'. Using GitHub API"
   repo=$(taplo get -f check.toml "${srcname}".github)
   vprefix=$(taplo get -f check.toml "${srcname}".prefix)
-  sha=$(curl "https://api.github.com/repos/${repo}/commits/${vprefix}${nver}" | jq -r '.sha' | head -c 7)
+  sha=$(curl "https://api.github.com/repos/${repo}/commits/${vprefix}${nver}" | jq -r '.sha')
   sed -E -i "s/_sha=.*/_sha='${sha}'/" "${pkgname}/PKGBUILD"
 fi
 
 if [ "${pkgname}" = "ledger-live" ]; then
   echo "Using GitHub API"
-  sha=$(curl "https://api.github.com/repos/LedgerHQ/ledger-live/commits/@ledgerhq/live-desktop@${nver}" | jq -r '.sha' | head -c 7)
+  sha=$(curl "https://api.github.com/repos/LedgerHQ/ledger-live/commits/@ledgerhq/live-desktop@${nver}" | jq -r '.sha')
   sed -E -i "s/_sha=.*/_sha='${sha}'/" "${pkgname}/PKGBUILD"
 fi
 
