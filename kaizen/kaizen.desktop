@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Kaizen
-Comment=Kaizen ElasticSearch GUI
-Exec=/opt/kaizen/kaizen.sh
-Icon=kaizen
-Terminal=false
-StartupNotify=true
-Type=Application
-Categories=Development
