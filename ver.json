@@ -7,9 +7,7 @@
   "moon": "1.15.4",
   "oxen-core": "10.3.0",
   "oxen-electron-wallet": "1.8.1",
-  "prey-node-client": "1.11.9",
   "proto": "0.21.0",
   "rustrover-eap": "233.8264.32",
-  "solidity": "0.8.22",
-  "xawtv": "3.107"
+  "solidity": "0.8.22"
 }

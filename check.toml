@@ -49,12 +49,6 @@ github = "oxen-io/oxen-electron-gui-wallet"
 use_latest_release = true
 prefix = "v"
 
-[prey-node-client]
-source = "github"
-github = "prey/prey-node-client"
-use_latest_release = true
-prefix = "v"
-
 [proto]
 source = "github"
 github = "moonrepo/proto"
@@ -71,8 +65,3 @@ source = "github"
 github = "ethereum/solidity"
 use_latest_release = true
 prefix = "v"
-
-[xawtv]
-source = "git"
-git = "https://git.linuxtv.org/xawtv3.git"
-prefix = "xawtv-"
