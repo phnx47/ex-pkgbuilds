@@ -35,9 +35,11 @@ if [ "${pkgname}" = "ledger-live" ]; then
 fi
 
 cd "${pkgname}"
+namcap PKGBUILD
 updpkgsums
 makepkg -scC
 makepkg --printsrcinfo >.SRCINFO
+#namcap "${pkgname}-${nver}-1-x86_64.pkg.tar.zst"
 cd ..
 
 nvtake "${srcname}" -c check.toml
