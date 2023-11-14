@@ -7,7 +7,7 @@
   "moon": "1.16.3",
   "oxen-core": "10.3.0",
   "oxen-electron-wallet": "1.8.1",
-  "proto": "0.22.1",
+  "proto": "0.22.2",
   "rustrover-eap": "233.10527.39",
   "solidity": "0.8.23"
 }
