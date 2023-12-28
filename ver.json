@@ -1,13 +1,3 @@
 {
-  "cro-chain-desktop": "1.4.6",
-  "cro-chain-maind": "4.2.5",
-  "ever-surf": "9.4.4",
-  "jetbrains-fleet": "1.28.117",
-  "ledger-live": "2.73.0",
-  "moon": "1.18.5",
-  "oxen-core": "10.3.0",
-  "oxen-electron-wallet": "1.8.1",
-  "proto": "0.26.0",
-  "rustrover-eap": "233.11799.306",
-  "solidity": "0.8.23"
+  "proto": "0.26.3"
 }
