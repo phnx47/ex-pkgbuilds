@@ -42,4 +42,4 @@ makepkg --printsrcinfo >.SRCINFO
 #namcap "${pkgname}-${nver}-1-x86_64.pkg.tar.zst"
 cd ..
 
-nvtake "${srcname}" -c check.toml
+nvtake "${srcname}=${nver}" -c check.toml
