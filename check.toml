@@ -37,12 +37,6 @@ github = "moonrepo/moon"
 use_latest_release = true
 prefix = "v"
 
-[oxen-core]
-source = "github"
-github = "oxen-io/oxen-core"
-use_latest_release = true
-prefix = "v"
-
 [oxen-electron-wallet]
 source = "github"
 github = "oxen-io/oxen-electron-gui-wallet"
