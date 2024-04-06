@@ -12,19 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Ubuntu packages
-        run: sudo apt-get update && sudo apt-get install libssl-dev libcurl4-openssl-dev
+      - name: Install pycurl deps
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
+
+      - name: Update certs
+        run: |
+          sudo update-ca-certificates
+          sudo mkdir -p /etc/pki/tls/certs
+          sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
 
       - name: Install nvchecker
         run: pip install nvchecker
 
       - name: Run check.sh
-        uses: nick-fields/retry@v3
-        with:
-          timeout_seconds: 30
-          retry_wait_seconds: 30
-          max_attempts: 3
-          command: ./check.sh > nver.txt
+        run: ./check.sh > nver.txt
 
       - name: Read nver.txt
         id: nver
