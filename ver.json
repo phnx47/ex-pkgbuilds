@@ -6,7 +6,7 @@
   "ledger-live": "2.77.2",
   "moon": "1.23.4",
   "oxen-electron-wallet": "1.8.1",
-  "proto": "0.34.0",
+  "proto": "0.34.1",
   "rustrover-eap": "233.15026.24",
   "solidity": "0.8.25"
 }
