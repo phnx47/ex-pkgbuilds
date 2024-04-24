@@ -14,7 +14,7 @@ if [ -z "${pkgname}" ]; then
 fi
 
 nvchecker -e "${srcname}" -c check.toml
-nver=$(jq -r .\""${srcname}"\" nver.json)
+nver=$(jq -r .data.\""${srcname}"\".version nver.json)
 sed -E -i "s/pkgver=.*/pkgver=${nver}/" "${pkgname}/PKGBUILD"
 sed -E -i "s/pkgrel=.*/pkgrel=1/" "${pkgname}/PKGBUILD"
 
@@ -40,4 +40,4 @@ makepkg -scC
 makepkg --printsrcinfo >.SRCINFO
 cd ..
 
-nvtake "${srcname}=${nver}" -c check.toml
+nvtake "${srcname}" -c check.toml
