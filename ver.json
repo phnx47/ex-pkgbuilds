@@ -31,9 +31,9 @@
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
     },
     "proto": {
-      "version": "0.34.4",
-      "gitref": "refs/tags/v0.34.4",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.34.4"
+      "version": "0.35.0",
+      "gitref": "refs/tags/v0.35.0",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.35.0"
     },
     "rustrover-eap": {
       "version": "241.15989.101"
